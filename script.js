@@ -17,3 +17,17 @@ function getExcelColumnNumberByName(columnName) {
 
     return result;
 }
+
+function getExcelColumnNameByNumber(columnNumber) {
+    if (!Number.isInteger(columnNumber) || columnNumber < 0) return "";
+
+    let result = "";
+    while (columnNumber > 0) {
+        columnNumber--;
+        let lastSymbolCode = columnNumber % 26;
+        result = String.fromCharCode(lastSymbolCode + 65) + result;
+        columnNumber = Math.floor(columnNumber / 26);
+    }
+
+    return result;
+}
