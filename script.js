@@ -31,3 +31,10 @@ function getExcelColumnNameByNumber(columnNumber) {
 
     return result;
 }
+
+console.log(getExcelColumnNumberByName("AA"));
+console.log(getExcelColumnNumberByName("ABC"));
+console.log(getExcelColumnNumberByName("JS"));
+console.log(getExcelColumnNameByNumber(28));
+console.log(getExcelColumnNameByNumber(100));
+console.log(getExcelColumnNameByNumber(63270));
